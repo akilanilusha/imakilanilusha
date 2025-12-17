@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import bg from "./assets/images/bg.png";
 import Navbar from "./components/Navbar";
 import Hero from "./components/hero";
 import SocialBar from "./components/socialBar";
@@ -22,21 +21,22 @@ function App() {
     );
 
     observer.observe(contactSection);
-
     return () => observer.disconnect();
   }, []);
 
   return (
-    <div
-      className="min-h-screen bg-cover bg-center"
-      style={{ backgroundImage: `url(${bg})` }}
-    >
-      <Navbar />
-      <MobileMenu/>
-      <SocialBar hide={hideSocial} /> {/* 👈 CONTROLLED HERE */}
-      <Hero />
-      <Content />
-      <Footer/>
+    <div className="min-h-screen relative overflow-hidden bg-[#f4f4f4]">
+      {/* SVG Noise Overlay */}
+      <div className="absolute inset-0 pointer-events-none noise-svg" />
+
+      <div className="relative z-10">
+        <Navbar />
+        <MobileMenu />
+        <SocialBar hide={hideSocial} />
+        <Hero />
+        <Content />
+        <Footer />
+      </div>
     </div>
   );
 }
