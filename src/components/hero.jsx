@@ -84,7 +84,7 @@ function Hero() {
     font-semibold shadow-lg hover:bg-orange-600
     transition flex items-center justify-center gap-2"
             onClick={() => {
-              window.open("/cv/akila_nilusha_intern_software_engineer.pdf", "_blank");
+              window.open("/cv/akila_nilusha_software_engineer.pdf", "_blank");
             }}
           >
             <CgSoftwareDownload size={22} />
