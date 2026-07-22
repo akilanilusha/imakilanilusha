@@ -14,6 +14,7 @@ export default function MobileMenu() {
     { name: "Projects", href: "#projects" },
     { name: "Certifications", href: "#certifications" },
     { name: "Contact", href: "#contact" },
+    { name: "Blog", href: "/blog", newTab: true },
   ];
 
   return (
@@ -58,7 +59,11 @@ export default function MobileMenu() {
               className="text-xl font-medium text-gray-900
     hover:text-orange-500 transition"
               onClick={() => {
-                window.location.hash = item.href; // 👈 navigate
+                if (item.newTab) {
+                  window.open(item.href, "_blank", "noopener,noreferrer");
+                } else {
+                  window.location.hash = item.href; // 👈 navigate
+                }
                 setOpen(false); // 👈 close modal
               }}
             >

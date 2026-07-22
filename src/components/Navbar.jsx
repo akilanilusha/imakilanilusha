@@ -39,6 +39,16 @@ function Navbar() {
               </a>
             </li>
           ))}
+          <li>
+            <a
+              href="/blog"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="cursor-pointer transition hover:text-orange-500"
+            >
+              Blog
+            </a>
+          </li>
         </ul>
       </div>
     </nav>
