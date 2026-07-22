@@ -2,7 +2,7 @@
   {
     "id": "modular-monolith-vs-microservices",
     "title": "Modular Monolith + Clean Architecture vs. Microservices: Picking the Right Fight",
-    "excerpt": "Why a modular monolith built with Clean Architecture is often the more pragmatic choice than microservices — and how to know when it isn't.",
+    "excerpt": "Why a modular monolith built with Clean Architecture is often the more pragmatic choice than microservices - and how to know when it isn't.",
     "coverImage": "/blog-images/moduler-monolith/image.png",
     "date": "2026-07-22",
     "tags": [
@@ -12,7 +12,7 @@
     "content": [
       {
         "type": "paragraph",
-        "text": "Every architecture conversation eventually lands on the same fork in the road: do we split this into microservices, or do we keep it together and just get disciplined about the internals? The industry has spent a decade treating that as a solved question — microservices are how serious companies build software — but the pendulum has been swinging back, and for good reason. The modular monolith, especially one built with Clean Architecture principles, has quietly become the pragmatic default for a huge number of systems that don't actually need what microservices offer."
+        "text": "Every architecture conversation eventually lands on the same fork in the road: do we split this into microservices, or do we keep it together and just get disciplined about the internals? The industry has spent a decade treating that as a solved question - microservices are how serious companies build software - but the pendulum has been swinging back, and for good reason. The modular monolith, especially one built with Clean Architecture principles, has quietly become the pragmatic default for a huge number of systems that don't actually need what microservices offer."
       },
       {
         "type": "paragraph",
@@ -28,7 +28,7 @@
       },
       {
         "type": "paragraph",
-        "text": "A modular monolith is a single deployable unit — one process, one repository, usually one database — internally partitioned into modules with hard boundaries. Clean Architecture reinforces this by organizing each module into layers: domain and entities at the center, application logic surrounding it, and infrastructure concerns pushed to the outer edge, with dependencies only ever pointing inward. Modules talk to each other through well-defined contracts, often in-process integration events, rather than network calls."
+        "text": "A modular monolith is a single deployable unit - one process, one repository, usually one database - internally partitioned into modules with hard boundaries. Clean Architecture reinforces this by organizing each module into layers: domain and entities at the center, application logic surrounding it, and infrastructure concerns pushed to the outer edge, with dependencies only ever pointing inward. Modules talk to each other through well-defined contracts, often in-process integration events, rather than network calls."
       },
       {
         "type": "paragraph",
@@ -41,10 +41,10 @@
       {
         "type": "list",
         "items": [
-          "Teams need to scale independently — different release cadences, tech stacks, and scaling profiles across teams",
+          "Teams need to scale independently - different release cadences, tech stacks, and scaling profiles across teams",
           "Parts of the system have wildly different resource profiles, like video transcoding versus a user-profile service",
-          "Organizational scale demands it — service boundaries mirroring team boundaries reduce coordination overhead",
-          "Fault isolation matters more than simplicity — a crash in one service shouldn't take down the whole system"
+          "Organizational scale demands it - service boundaries mirroring team boundaries reduce coordination overhead",
+          "Fault isolation matters more than simplicity - a crash in one service shouldn't take down the whole system"
         ]
       },
       {
@@ -57,21 +57,21 @@
       },
       {
         "type": "paragraph",
-        "text": "A modular monolith with Clean Architecture gives you most of the design benefits people actually want from microservices — separation of concerns, testability, independent module evolution — without most of the operational costs."
+        "text": "A modular monolith with Clean Architecture gives you most of the design benefits people actually want from microservices - separation of concerns, testability, independent module evolution - without most of the operational costs."
       },
       {
         "type": "list",
         "items": [
-          "No network calls between modules — a function call is faster and simpler to debug",
-          "Transactional integrity is trivial — one database transaction instead of a saga",
+          "No network calls between modules - a function call is faster and simpler to debug",
+          "Transactional integrity is trivial - one database transaction instead of a saga",
           "One deployment pipeline instead of coordinating versioned contracts across services",
-          "Refactoring is cheaper — moving logic between modules is a code change, not a service migration",
+          "Refactoring is cheaper - moving logic between modules is a code change, not a service migration",
           "You can still extract a service later if a module is genuinely isolated"
         ]
       },
       {
         "type": "paragraph",
-        "text": "The catch is that a modular monolith only delivers these benefits if the module boundaries are actually enforced. A monolith with no internal discipline is just the distributed-monolith problem in reverse — a big ball of mud that happens to run in one process. Clean Architecture is what keeps the boundaries honest: dependencies point inward, infrastructure is swappable, and each module's domain logic doesn't leak into another module's."
+        "text": "The catch is that a modular monolith only delivers these benefits if the module boundaries are actually enforced. A monolith with no internal discipline is just the distributed-monolith problem in reverse - a big ball of mud that happens to run in one process. Clean Architecture is what keeps the boundaries honest: dependencies point inward, infrastructure is swappable, and each module's domain logic doesn't leak into another module's."
       },
       {
         "type": "heading",
@@ -104,7 +104,7 @@
       },
       {
         "type": "paragraph",
-        "text": "The discipline that makes a modular monolith work — strict module boundaries, dependencies pointing inward via Clean Architecture, separate DbContexts per module, communication through explicit contracts instead of shared internals — is the same discipline that would make a microservices migration succeed if you ever needed one. Investing in that discipline early is rarely wasted, regardless of which way the system eventually goes."
+        "text": "The discipline that makes a modular monolith work - strict module boundaries, dependencies pointing inward via Clean Architecture, separate DbContexts per module, communication through explicit contracts instead of shared internals - is the same discipline that would make a microservices migration succeed if you ever needed one. Investing in that discipline early is rarely wasted, regardless of which way the system eventually goes."
       }
     ]
   }
