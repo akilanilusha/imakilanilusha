@@ -1,43 +1,24 @@
-import { useEffect, useState } from "react";
-import Navbar from "./components/Navbar";
-import Hero from "./components/hero";
-import SocialBar from "./components/socialBar";
-import Content from "./components/Content";
-import MobileMenu from "./components/MobileMenu";
-import Footer from "./components/Footer";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import HomePage from "./pages/HomePage";
+import BlogListPage from "./pages/BlogListPage";
+import BlogPostPage from "./pages/BlogPostPage";
 
 function App() {
-  const [hideSocial, setHideSocial] = useState(false);
-
-  useEffect(() => {
-    const contactSection = document.getElementById("contact-section");
-    if (!contactSection) return;
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        setHideSocial(entry.isIntersecting);
-      },
-      { threshold: 0.3 }
-    );
-
-    observer.observe(contactSection);
-    return () => observer.disconnect();
-  }, []);
-
   return (
-    <div className="min-h-screen relative overflow-hidden bg-[#f4f4f4]">
-      {/* SVG Noise Overlay */}
-      <div className="absolute inset-0 pointer-events-none noise-svg" />
+    <BrowserRouter>
+      <div className="min-h-screen relative overflow-hidden bg-[#f4f4f4]">
+        {/* SVG Noise Overlay */}
+        <div className="absolute inset-0 pointer-events-none noise-svg" />
 
-      <div className="relative z-10">
-        <Navbar />
-        <MobileMenu />
-        <SocialBar hide={hideSocial} />
-        <Hero />
-        <Content />
-        <Footer />
+        <div className="relative z-10">
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/blog" element={<BlogListPage />} />
+            <Route path="/blog/:id" element={<BlogPostPage />} />
+          </Routes>
+        </div>
       </div>
-    </div>
+    </BrowserRouter>
   );
 }
 

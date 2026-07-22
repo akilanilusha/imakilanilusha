@@ -1,0 +1,111 @@
+[
+  {
+    "id": "modular-monolith-vs-microservices",
+    "title": "Modular Monolith + Clean Architecture vs. Microservices: Picking the Right Fight",
+    "excerpt": "Why a modular monolith built with Clean Architecture is often the more pragmatic choice than microservices — and how to know when it isn't.",
+    "coverImage": "/blog-images/moduler-monolith/image.png",
+    "date": "2026-07-22",
+    "tags": [
+      "Architecture",
+      "Backend"
+    ],
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "Every architecture conversation eventually lands on the same fork in the road: do we split this into microservices, or do we keep it together and just get disciplined about the internals? The industry has spent a decade treating that as a solved question — microservices are how serious companies build software — but the pendulum has been swinging back, and for good reason. The modular monolith, especially one built with Clean Architecture principles, has quietly become the pragmatic default for a huge number of systems that don't actually need what microservices offer."
+      },
+      {
+        "type": "paragraph",
+        "text": "This isn't an argument that microservices are wrong. It's an argument that the decision should be made on evidence, not on what the industry's biggest names happen to be doing."
+      },
+      {
+        "type": "heading",
+        "text": "What Each Approach Actually Is"
+      },
+      {
+        "type": "paragraph",
+        "text": "Microservices split a system into independently deployable services, each owning its own data store, each communicating over the network, each with its own deployment pipeline. The unit of scaling, deployment, and failure is the service."
+      },
+      {
+        "type": "paragraph",
+        "text": "A modular monolith is a single deployable unit — one process, one repository, usually one database — internally partitioned into modules with hard boundaries. Clean Architecture reinforces this by organizing each module into layers: domain and entities at the center, application logic surrounding it, and infrastructure concerns pushed to the outer edge, with dependencies only ever pointing inward. Modules talk to each other through well-defined contracts, often in-process integration events, rather than network calls."
+      },
+      {
+        "type": "paragraph",
+        "text": "The key insight: both approaches are trying to prevent a codebase from turning into an unmaintainable ball of mud, but they pay for that discipline in very different currencies."
+      },
+      {
+        "type": "heading",
+        "text": "Where Microservices Earn Their Cost"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Teams need to scale independently — different release cadences, tech stacks, and scaling profiles across teams",
+          "Parts of the system have wildly different resource profiles, like video transcoding versus a user-profile service",
+          "Organizational scale demands it — service boundaries mirroring team boundaries reduce coordination overhead",
+          "Fault isolation matters more than simplicity — a crash in one service shouldn't take down the whole system"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "The cost for all of this is real and often underestimated: distributed transactions, network latency, eventual consistency, service discovery, distributed tracing, versioned contracts between services, and an operational surface area that requires serious platform engineering investment to run well."
+      },
+      {
+        "type": "heading",
+        "text": "Where the Modular Monolith Wins"
+      },
+      {
+        "type": "paragraph",
+        "text": "A modular monolith with Clean Architecture gives you most of the design benefits people actually want from microservices — separation of concerns, testability, independent module evolution — without most of the operational costs."
+      },
+      {
+        "type": "list",
+        "items": [
+          "No network calls between modules — a function call is faster and simpler to debug",
+          "Transactional integrity is trivial — one database transaction instead of a saga",
+          "One deployment pipeline instead of coordinating versioned contracts across services",
+          "Refactoring is cheaper — moving logic between modules is a code change, not a service migration",
+          "You can still extract a service later if a module is genuinely isolated"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "The catch is that a modular monolith only delivers these benefits if the module boundaries are actually enforced. A monolith with no internal discipline is just the distributed-monolith problem in reverse — a big ball of mud that happens to run in one process. Clean Architecture is what keeps the boundaries honest: dependencies point inward, infrastructure is swappable, and each module's domain logic doesn't leak into another module's."
+      },
+      {
+        "type": "heading",
+        "text": "The Real Decision Criteria"
+      },
+      {
+        "type": "paragraph",
+        "text": "Instead of asking microservices or monolith, the more useful questions are:"
+      },
+      {
+        "type": "list",
+        "items": [
+          "Do we have more than one team that needs to deploy independently, today, not hypothetically?",
+          "Do different parts of the system have genuinely different scaling needs?",
+          "Can we afford the operational tax of service meshes, distributed tracing, and multi-service CI/CD?",
+          "Is our domain well enough understood to draw stable service boundaries?"
+        ]
+      },
+      {
+        "type": "paragraph",
+        "text": "Most systems, especially in their first one to three years, answer no to enough of these questions that a modular monolith is the better starting point. It defers the hardest distributed-systems problems until they're actually justified by real organizational or scaling pressure, rather than paying for them speculatively."
+      },
+      {
+        "type": "heading",
+        "text": "A Middle Path, Not a Compromise"
+      },
+      {
+        "type": "paragraph",
+        "text": "It's worth resisting the framing that the modular monolith is a compromise or a stepping stone people should feel embarrassed about. For a large share of systems, it's simply the correct end state, not a phase to graduate out of. The goal isn't to eventually arrive at microservices; the goal is to match the architecture to the actual scaling, team, and reliability constraints of the system in front of you."
+      },
+      {
+        "type": "paragraph",
+        "text": "The discipline that makes a modular monolith work — strict module boundaries, dependencies pointing inward via Clean Architecture, separate DbContexts per module, communication through explicit contracts instead of shared internals — is the same discipline that would make a microservices migration succeed if you ever needed one. Investing in that discipline early is rarely wasted, regardless of which way the system eventually goes."
+      }
+    ]
+  }
+]
