@@ -107,5 +107,272 @@
         "text": "The discipline that makes a modular monolith work - strict module boundaries, dependencies pointing inward via Clean Architecture, separate DbContexts per module, communication through explicit contracts instead of shared internals - is the same discipline that would make a microservices migration succeed if you ever needed one. Investing in that discipline early is rarely wasted, regardless of which way the system eventually goes."
       }
     ]
-  }
+  },
+  {
+  "id": "chatgpt-scheduled-tasks-learning",
+  "title": "ChatGPT Scheduled Tasks: Turning AI into a Daily Learning Assistant",
+  "excerpt": "How ChatGPT Scheduled Tasks can turn AI from a tool you use on demand into a proactive daily assistant for learning, productivity, reminders, research, and recurring workflows.",
+  "coverImage": "/blog-images/chatgpt-scheduled-task/image.png",
+  "date": "2026-08-18",
+  "tags": [
+    "AI",
+    "ChatGPT",
+    "Productivity"
+  ],
+  "content": [
+    {
+      "type": "paragraph",
+      "text": "I recently discovered a ChatGPT feature that changed the way I think about using AI for learning: Scheduled Tasks. Instead of opening ChatGPT whenever I remember that I need to study or complete something, I can schedule a task and let ChatGPT prepare it for me."
+    },
+    {
+      "type": "paragraph",
+      "text": "I decided to try it with a daily learning session. I scheduled the session for the afternoon, and when the scheduled time arrived, I received a notification telling me that my learning session was ready. When I opened ChatGPT, the scheduled session was already waiting for me."
+    },
+    {
+      "type": "paragraph",
+      "text": "That small change made the experience feel very different. Instead of me remembering to start a learning session, ChatGPT became part of my daily routine."
+    },
+    {
+      "type": "heading",
+      "text": "What Are ChatGPT Scheduled Tasks?"
+    },
+    {
+      "type": "paragraph",
+      "text": "Scheduled Tasks allow ChatGPT to perform a task at a specific time or on a recurring schedule. You can create one-time tasks, recurring tasks, and tasks that check for changes and notify you when something important happens."
+    },
+    {
+      "type": "paragraph",
+      "text": "You can schedule tasks for specific times or broader periods such as morning, afternoon, or evening. This makes the feature useful for more than simple reminders."
+    },
+    {
+      "type": "heading",
+      "text": "Why Is This Different From Normal ChatGPT?"
+    },
+    {
+      "type": "paragraph",
+      "text": "Traditional ChatGPT usage is mostly reactive. You open ChatGPT, write a prompt, and wait for a response. Scheduled Tasks introduces a proactive workflow where ChatGPT can be ready for you at the time you choose."
+    },
+    {
+      "type": "list",
+      "items": [
+        "You do not have to remember to start the task",
+        "You can create recurring learning sessions",
+        "ChatGPT can notify you when the task is ready",
+        "You can use it for one-time or recurring activities",
+        "You can manage, edit, pause, resume, or delete tasks",
+        "You can use tasks to build consistent workflows and habits"
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "How I Used It for Daily Learning"
+    },
+    {
+      "type": "paragraph",
+      "text": "My example is simple: I created a daily learning session scheduled for the afternoon. Instead of manually opening a new chat and deciding what to study every day, the scheduled task gives me a consistent point in the day to continue learning."
+    },
+    {
+      "type": "paragraph",
+      "text": "When the task becomes ready, I receive a notification. I can then open ChatGPT and continue with the session."
+    },
+    {
+      "type": "paragraph",
+      "text": "For someone trying to build a learning habit, this removes one of the biggest barriers: getting started."
+    },
+    {
+      "type": "heading",
+      "text": "How to Create a Scheduled Task"
+    },
+    {
+      "type": "paragraph",
+      "text": "There are several ways to create and access Scheduled Tasks."
+    },
+    {
+      "type": "heading",
+      "text": "Method 1: Use the Scheduled Page"
+    },
+    {
+      "type": "paragraph",
+      "text": "On supported ChatGPT interfaces, you can find the Scheduled page from the ChatGPT sidebar. From there, you can create a new task, view existing tasks, see when they will run next, and manage them."
+    },
+    {
+      "type": "heading",
+      "text": "Method 2: Ask ChatGPT Directly"
+    },
+    {
+      "type": "paragraph",
+      "text": "You can simply tell ChatGPT what you want it to schedule. You do not need to write a complicated automation command."
+    },
+    {
+      "type": "paragraph",
+      "text": "For example: Create a daily learning session for me every afternoon."
+    },
+    {
+      "type": "paragraph",
+      "text": "ChatGPT can interpret the request and create the scheduled task."
+    },
+    {
+      "type": "heading",
+      "text": "Method 3: Manage Tasks From Settings"
+    },
+    {
+      "type": "paragraph",
+      "text": "You can also open Settings, go to Notifications, and select Manage tasks. This gives you access to your task list and lets you manage your scheduled tasks."
+    },
+    {
+      "type": "heading",
+      "text": "How to Manage an Existing Task"
+    },
+    {
+      "type": "paragraph",
+      "text": "After creating a task, you can manage it from the task interface. Depending on the interface, you can edit the task, change its schedule, pause it, resume it, or delete it."
+    },
+    {
+      "type": "list",
+      "items": [
+        "Edit the task instructions",
+        "Change the schedule",
+        "Pause the task",
+        "Resume a paused task",
+        "Delete the task",
+        "View when the task will run next"
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Notifications"
+    },
+    {
+      "type": "paragraph",
+      "text": "Notifications are an important part of the experience. ChatGPT can notify you when a scheduled task has completed or is ready. Depending on your settings and platform, notifications can include push notifications and email notifications."
+    },
+    {
+      "type": "paragraph",
+      "text": "For example, in my case, I received a notification that my daily learning session was ready. I then opened ChatGPT and continued with the session."
+    },
+    {
+      "type": "heading",
+      "text": "What Can You Use Scheduled Tasks For?"
+    },
+    {
+      "type": "list",
+      "items": [
+        "Daily programming practice",
+        "Exam preparation",
+        "Language learning",
+        "Daily revision",
+        "Reading habits",
+        "Daily news and research",
+        "Learning a new skill",
+        "Daily productivity routines",
+        "Recurring reminders",
+        "Checking for important updates",
+        "Daily briefings",
+        "Regular review sessions"
+      ]
+    },
+    {
+      "type": "heading",
+      "text": "Scheduled Tasks Can Also Monitor Changes"
+    },
+    {
+      "type": "paragraph",
+      "text": "Scheduled Tasks are not limited to reminders. You can also ask ChatGPT to check for changes at regular intervals and notify you when there is a meaningful update."
+    },
+    {
+      "type": "paragraph",
+      "text": "For example, you could create a task that checks for important updates about a topic and only notifies you when something relevant changes."
+    },
+    {
+      "type": "heading",
+      "text": "Which ChatGPT Plans Support Scheduled Tasks?"
+    },
+    {
+      "type": "paragraph",
+      "text": "According to OpenAI's current documentation, Scheduled Tasks are available globally for supported ChatGPT plans. The available plans include ChatGPT Go, Plus, Pro, Business, and Enterprise."
+    },
+    {
+      "type": "list",
+      "items": [
+        "ChatGPT Go - up to 3 active tasks",
+        "ChatGPT Plus - up to 5 active tasks",
+        "ChatGPT Pro - up to 15 active tasks",
+        "ChatGPT Business - up to 15 active tasks",
+        "ChatGPT Enterprise - up to 15 active tasks"
+      ]
+    },
+    {
+      "type": "paragraph",
+      "text": "The number of active tasks you can maintain depends on your ChatGPT plan. If you reach your active-task limit, you may need to pause or delete an existing task before creating another one."
+    },
+    {
+      "type": "heading",
+      "text": "Are There Any Limitations?"
+    },
+    {
+      "type": "paragraph",
+      "text": "There are some limitations to keep in mind. Tasks cannot run more than once per hour. Task usage is also subject to the limits of your ChatGPT plan."
+    },
+    {
+      "type": "paragraph",
+      "text": "Some tasks may also become paused after a period of inactivity. If a task requires additional action from you, it may also become paused."
+    },
+    {
+      "type": "paragraph",
+      "text": "Scheduled Tasks are designed for scheduled and recurring workflows rather than instant event-triggered automation. They also do not support voice chats."
+    },
+    {
+      "type": "heading",
+      "text": "My Favorite Part"
+    },
+    {
+      "type": "paragraph",
+      "text": "The most interesting part for me is not simply the reminder. It is the change in the relationship between me and the AI."
+    },
+    {
+      "type": "paragraph",
+      "text": "Normally, I think: I need to remember to use ChatGPT."
+    },
+    {
+      "type": "paragraph",
+      "text": "With Scheduled Tasks, the experience becomes: ChatGPT is ready when it is time to learn."
+    },
+    {
+      "type": "heading",
+      "text": "From Reactive AI to Proactive AI"
+    },
+    {
+      "type": "paragraph",
+      "text": "This is what makes Scheduled Tasks interesting to me. AI is moving beyond simply answering questions when we ask. It can become part of a recurring workflow."
+    },
+    {
+      "type": "paragraph",
+      "text": "A daily learning session is just one example. The same idea can be applied to productivity, research, news monitoring, revision, reminders, and many other routines."
+    },
+    {
+      "type": "paragraph",
+      "text": "The real value is reducing the friction between deciding to do something and actually starting it."
+    },
+    {
+      "type": "heading",
+      "text": "Final Thoughts"
+    },
+    {
+      "type": "paragraph",
+      "text": "For me, ChatGPT Scheduled Tasks are more than a reminder feature. They provide a simple way to turn ChatGPT into a recurring personal assistant."
+    },
+    {
+      "type": "paragraph",
+      "text": "Instead of using AI only when I remember to open it, I can make it part of my daily routine. That can make learning and other repetitive activities much more consistent."
+    },
+    {
+      "type": "paragraph",
+      "text": "AI assistants become much more powerful when they do not just answer questions, but also help us create consistent workflows and habits."
+    },
+    {
+      "type": "paragraph",
+      "text": "If you already use ChatGPT for learning, productivity, research, or daily routines, Scheduled Tasks is definitely a feature worth exploring."
+    }
+  ]
+}
 ]
