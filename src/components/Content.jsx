@@ -5,6 +5,7 @@ import Projects from "./Projects.jsx";
 import Certifications from "./Certifications.jsx";
 import GetInTouch from "./GetInTouch.jsx";
 import Skills from "./skills.jsx";
+import Education from "./Education.jsx";
 function Content() {
   return (
     <section className="w-full py-24">
@@ -19,6 +20,7 @@ function Content() {
         <About/>
         <Skills/>
         <Experience/>
+        <Education/>
         <Projects/>
         <Certifications/>
         <GetInTouch/>
